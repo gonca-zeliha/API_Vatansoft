@@ -1,29 +1,26 @@
 # API Response Size Checker
 
-Bu Python projesi, belirli bir API'ye (random.dog) 100 istek göndererek her bir istekten dönen görsellerin boyutlarını kontrol eder. Görsellerin boyutlarını karşılaştırarak, 1.050.000 byte (1 MB) sınırını aşan görsellerin sayısını ve bu sınırın altında kalan görsellerin sayısını hesaplar. Ayrıca, görsel boyutlarının dağılımını histogram şeklinde görselleştirir.
+Bu Python projesi, random.dog API'sine 100 istek gönderir ve her bir istekten dönen görsellerin boyutlarını kontrol eder. İsteklerin yanıtlarında dönen görsellerin boyutları, 1.050.000 byte (yaklaşık 1 MB) sınırına göre değerlendirilir. Sonuç olarak, büyük ve küçük boyutlu görsellerin sayıları hesaplanır ve görsel boyutlarının dağılımı histogram ile görselleştirilir.
 
 ## Proje Amacı
 
-Bu proje, API yanıtlarının boyutlarını kontrol etmek ve analiz etmek için basit bir araçtır. Özellikle, görsel boyutları gibi belirli parametrelerin sınırlarını aşan verilerin izlenmesini sağlar.
+Bu proje, API yanıtlarından elde edilen görsellerin boyutlarını analiz etmek amacıyla geliştirilmiştir. Belirli bir boyut sınırına (1.050.000 byte) göre görsellerin boyutlarını karşılaştırmak ve bu bilgiyi görsel bir şekilde sunmak amacıyla kullanılır.
 
 ## Özellikler
 
-- 100 istek gönderir.
-- Her istek için dönen görselin boyutunu kontrol eder.
-- Boyutlar 1.050.000 byte sınırına göre iki gruba ayrılır (büyük / küçük).
-- Sonuçları terminalde yazdırır.
-- Boyutların dağılımını bir histogram grafiği ile görselleştirir.
+- 100 API isteği gönderilir.
+- API yanıtından dönen görselin boyutu alınır.
+- Boyutlar, 1.050.000 byte (1 MB) limitine göre iki gruba ayrılır: büyük ve küçük.
+- Sonuçlar terminalde yazdırılır.
+- Boyutların dağılımı histogram grafiğiyle görselleştirilir.
 
 ## Kullanım
 
 ### Gereksinimler
 
-Bu projeyi çalıştırabilmek için Python 3 ve aşağıdaki kütüphaneler gereklidir:
+Bu projeyi çalıştırabilmek için Python 3 ve aşağıdaki kütüphanelerin yüklü olması gereklidir:
 
-- `requests`
-- `matplotlib`
+- `requests`: API'ye istek göndermek için.
+- `matplotlib`: Görselleştirme (grafik) oluşturmak için.
 
-Gerekli kütüphaneleri yüklemek için aşağıdaki komutu kullanabilirsiniz:
 
-```bash
-pip install requests matplotlib
